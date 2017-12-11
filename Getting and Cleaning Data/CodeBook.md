@@ -1,7 +1,9 @@
 Code Book
 ========
 
-Description
+Structure and content of the dataset used can be found in [Raw Data](#data)
+
+Raw Data<a name="data"></a>
 -------------------
 
 ### Source
@@ -70,3 +72,5 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 * tBodyGyroMean
 * tBodyGyroJerkMean
 
+Data Transformation
+-------------------
