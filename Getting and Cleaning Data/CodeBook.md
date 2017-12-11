@@ -83,7 +83,7 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 ### Variables from new tidy data set
 
 * activity
-        Activity identifier, string with 6 possible values: 
+        - Activity identifier, string with 6 possible values: 
 	- `WALKING`
 	- `WALKING_UPSTAIRS`
 	- `WALKING_DOWNSTAIRS`
@@ -93,7 +93,7 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 
 * subjectId
 
-        Subject identifier, integer, ranges from 1 to 30.
+        - Subject identifier, integer, ranges from 1 to 30.
 
 * timeBodyAccelerometerMeanX
 * timeBodyAccelerometerMeanY
@@ -209,3 +209,11 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 
 Data Transformation<a name="transformations"></a>
 -------------------
+The raw data has been transformed over the following steps:
+* Training and test sets merged to create one data set.
+* The measurements on the mean and standard deviation for each measurement extracted.
+* Used descriptive activity names to name the activities in the data set
+* Data set approproately named with descriptive variable names.
+* From the data set above, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+All steps above are contained and implemented by the  `run_analysis.R` R script (see `README.md` file for usage instructions).
