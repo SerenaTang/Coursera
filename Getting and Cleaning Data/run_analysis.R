@@ -46,7 +46,7 @@ dataMeanAndStd<- dataMerged[,col.extract]
 
 ## Data with activity description
 dataWithActivityDesc <- merge(dataMeanAndStd, activities, by="activityLabel", all.x = TRUE)
-
+dataWithActivityDesc <- select(dataWithActivityDesc,-activityLabel)
 
 ########################################################################
 #####4. Labels dataset with descriptive variable names #################
@@ -64,8 +64,8 @@ cols <- gsub("Acc", "Accelerometer", cols)
 cols <- gsub("Gyro", "Gyroscope", cols)
 cols <- gsub("Mag", "Magnitude", cols)
 
-cols <- gsub("-mean", "Mean",cols)
-cols <- gsub("-std", "StandardDeviation",cols)
+cols <- gsub("mean", "Mean",cols)
+cols <- gsub("std", "StandardDeviation",cols)
 cols <- gsub("Freq", "Frequency",cols)
 
 ## Assigns new column names
